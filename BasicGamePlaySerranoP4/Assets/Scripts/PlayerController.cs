@@ -24,9 +24,9 @@ public class PlayerController : MonoBehaviour
 
         if (transform.position.x > xRange)
         {
-            transform.position = new Vector3(cRange, transform.position.y, transform.position.z);
+            transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
-        horizontalInput = horizontalInput.GetAxis("Horizontal");
+        horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
     }
 }
